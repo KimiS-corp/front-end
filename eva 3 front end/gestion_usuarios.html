@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Usuarios</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+</head>
+<body>
+    <div class="app-header">
+        <div class="app-logo">App Local</div>
+        <div class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="gestion_usuarios.html" class="active">Gestión Usuarios</a>
+            <a href="publicaciones.html">Publicaciones</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="https://home">
+            <button>🔎</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Gestión Usuarios</h1>
+
+        <form id="user-form">
+            <div class="form-row three-columns">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name">
+                    <div class="error-message" id="name-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" name="username">
+                    <div class="error-message" id="username-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="entry-date">Fecha Ingreso</label>
+                    <input type="text" id="entry-date" name="entry-date">
+                    <div class="error-message" id="entry-date-error"></div>
+                </div>
+            </div>
+
+            <div class="form-row two-columns">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Sitio Web</label>
+                    <input type="text" id="website" name="website">
+                </div>
+            </div>
+
+            <div class="form-row one-column">
+                <div class="form-group">
+                    <label for="gender">Género (No Requerido)</label>
+                    <select id="gender" name="gender">
+                        <option value="">Seleccione</option>
+                        <option value="male">Masculino</option>
+                        <option value="female">Femenino</option>
+                        <option value="other">Otro</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" id="save-btn">Guardar</button>
+                <button type="button" id="cancel-btn">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>
